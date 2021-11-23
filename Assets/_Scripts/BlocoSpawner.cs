@@ -10,17 +10,6 @@ public class BlocoSpawner : MonoBehaviour
     void Start()
     {
         gm = GameManager.GetInstance();
-        GameManager.changeStateDelegate += Construir;
-        Construir();
-    }
-
-    void Construir()
-    {
-        if (gm.gameState == GameManager.GameState.MENU)
-        {            
-            foreach (Transform child in transform) {
-                GameObject.Destroy(child.gameObject);
-            }
             for (int i = 0; i < 12; i++)
             {
                 for (int j = 0; j < 4; j++)
